@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="gym; onefitness; bachupally;">
+   <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+  </head>
+  <body class="app sidebar-mini rtl">
+    <!-- Navbar -->
+    
+   <?php include 'include/header.php'; ?>
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <?php include 'include/sidebar.php'; ?>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .slideshow-container {
+    max-width: 100%; /* Increased width for larger images */
+    height: 90%; /* Set a fixed height for the slideshow container */
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  }
+
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+    width: 100%; /* Make the images cover the entire container width */
+    height: 480px; /* Make the images cover the entire container height */
+   object-fit: cover;/* Ensure the aspect ratio is maintained */
+  }
+
+    /* Styling for Login/Signup Buttons */
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button-container form {
+      display: inline-block;
+    }
+
+    .button-container input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .button-container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="slideshow-container">
+    <div class="mySlides" >
+      <img src="assets/img/pic1.jpeg" alt="Image 1">
+    
+    </div>
+    <div class="mySlides">
+      <img src="assets/img/pic2.jpeg"alt="Image 2">
+    </div>
+    <div class="mySlides">
+      <img src="assets/img/pic4.jpeg" alt="Image 3">
+    </div>
+    <div class="mySlides">
+      <img src="assets/img/pic3.jpeg" alt="Image 4">
+    </div>
+    <div class="mySlides">
+      <img src="assets/img/pic6.jpeg" alt="Image 4">
+    </div>
+    
+    <!-- Add more slides as needed -->
+  </div>
+
+  <!--h1>Login/Signup Buttons</h1>
+  <div class="button-container">
+    <form action="login.php" method="post">
+      <input type="submit" value="Login">
+    </form>
+    <form action="registration.php" method="post">
+      <input type="submit" value="Signup">
+    </form>
+  </div-->
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      const slides = document.getElementsByClassName("mySlides");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2000); // Change slide every 2 seconds
+    }
+  </script>
+</body>
+</html>
